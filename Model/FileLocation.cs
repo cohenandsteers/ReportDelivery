@@ -1,10 +1,10 @@
 ﻿namespace ReportPublisher.Model
 {
-    public class FilesLocation
+    public class FileLocation
     {
-        public string SourceLocation { get; set; }
-        public string DestinationLocation { get; set; }
+        public string Location { get; set; }
         public string FileType { get; set; }
         public string Filter { get; set; }
+        public string LocationType { get; set; }
     }
 }

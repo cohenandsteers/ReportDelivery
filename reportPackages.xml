@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ReportPackages>
+	<ReportPackage id="1" active="true" name="MarketingReports">
+		<files 	
+				directorySource="SourceReports\Marketing\" 
+				filter="*"
+				fileType="pdf"
+				destinationType="folder" 
+				destinationFolder="c:\temp\ClientReports\"
+		></files>
+	</ReportPackage>
+	<ReportPackage id="2" active="true" name="FinanceReports">
+		<files 	
+				directorySource="SourceReports\Finance" 
+				filter="*"
+				fileType="pdf|doc"
+				destinationType="Email" 
+				emailTo="abc@company.com"
+		></files>
+	</ReportPackage>
+</ReportPackages>

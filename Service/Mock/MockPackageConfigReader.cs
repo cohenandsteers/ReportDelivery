@@ -1,8 +1,8 @@
-﻿using ReportPublisher.Interface;
+﻿using System.Collections.Generic;
+using ReportPublisher.Interface;
 using ReportPublisher.Model;
-using System.Collections.Generic;
 
-namespace ReportPublisher.Service
+namespace ReportPublisher.Service.Mock
 {
     public class MockPackageConfigReader : IPackageConfigReader
     {
@@ -15,15 +15,33 @@ namespace ReportPublisher.Service
                     Id = 1,
                     Active = true,
                     Name = "Marketing",
-                    Files = new List<FilesLocation>()
+                    SourceLocation = new List<FileLocation>()
                     {
                         new ()
                         {
-                            DestinationLocation = @"c:\temp\ClientReports",
-                            SourceLocation = @"SourceReports\Marketing",
+                            LocationType = "folder",
+                            Location= @"SourceReports\Marketing",
                             FileType = "pdf",
                             Filter = "*"
                         }
+                    },
+                    DestinationLocation = new List<FileLocation>()
+                    {
+                        new ()
+                        {
+                            LocationType = "folder",
+                            Location= @"c:\temp\Marketing",
+                            FileType = "pdf",
+                            Filter = "*"
+                        },
+                        new ()
+                        {
+                            LocationType = "folder",
+                            Location= @"c:\temp\Archive",
+                            FileType = "zip",
+                            Filter = "*"
+                        }
+
                     }
                 },
                 new ()
@@ -31,15 +49,33 @@ namespace ReportPublisher.Service
                     Id = 1,
                     Active = true,
                     Name = "Finance",
-                    Files = new List<FilesLocation>()
+                    SourceLocation = new List<FileLocation>()
                     {
                         new ()
                         {
-                            DestinationLocation = @"c:\temp\FinanceReports",
-                            SourceLocation = @"SourceReports\Finance",
+                            LocationType = "folder",
+                            Location = @"SourceReports\Finance",
                             FileType = "xlsx",
                             Filter = "*"
                         }
+                    },
+                    DestinationLocation = new List<FileLocation>()
+                    {
+                        new ()
+                        {
+                            LocationType = "folder",
+                            Location= @"c:\temp\FinanceReports",
+                            FileType = "pdf",
+                            Filter = "*"
+                        },
+                        new ()
+                        {
+                            LocationType = "email",
+                            Location= @"c:\temp\Archive",
+                            FileType = "zip",
+                            Filter = "*"
+                        }
+
                     }
                 }
             };

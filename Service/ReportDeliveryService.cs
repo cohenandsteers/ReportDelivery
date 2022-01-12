@@ -8,6 +8,10 @@ namespace ReportPublisher.Service
 {
     public class ReportDeliveryService : IReportDeliveryService
     {
+        public ReportDeliveryService(IFileReader fileReader, IFileSender fileSender)
+        {
+            
+        }
 
         public Task DeliverReports(IEnumerable<ReportPackage> packages, IEnumerable<Client> clients)
         {
