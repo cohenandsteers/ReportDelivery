@@ -23,7 +23,7 @@ namespace ReportPublisher.Service
         {
             var pg = _configReader.LoadReportPackageConfiguration();
             var cl = _clientRepository.GetAll();
-            await _deliveryService.DeliverReports(pg, cl);
+            //await _deliveryService.DeliverReports(pg, cl);
             Console.WriteLine("Hello app");
         }
         

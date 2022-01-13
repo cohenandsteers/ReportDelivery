@@ -27,6 +27,7 @@ namespace ReportPublisher
                 .AddSingleton<IReportDeliveryService, ReportDeliveryService>()
                 .AddTransient<IPackageConfigReader, MockPackageConfigReader>()
                 .AddTransient<IFileSender, MockFileSender>()
+                .AddTransient<IFileReader, SampleFileReader>()
                 .AddTransient<IClientRepository, MockClientRepo>()
             ;
     }
