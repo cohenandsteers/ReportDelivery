@@ -50,7 +50,7 @@ namespace ReportPublisher.Service.Mock
                 {
                     Id = 3,
                     Code = "CL4",
-                    Name = "XYZ", Accounts = new List<Account>()
+                    Name = "KLM", Accounts = new List<Account>()
                     {
                         new()
                         {

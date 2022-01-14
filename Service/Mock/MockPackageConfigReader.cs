@@ -38,7 +38,7 @@ namespace ReportPublisher.Service.Mock
                         {
                             LocationType = "folder",
                             Location= @"c:\temp\Archive",
-                            FileType = "zip",
+                            FileType = "pdf",
                             Filter = "*"
                         }
 
