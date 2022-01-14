@@ -11,6 +11,6 @@ namespace ReportPublisher.Service.Mock
     public class SampleFileReader : IFileReader
     {
         public async Task<IEnumerable<FileInfo>> GetFiles(string fileLocation, string filter, string fileType) =>
-            Directory.GetFiles(fileLocation, filter).Select(f => new FileInfo(f));
+            throw new NotImplementedException();
     }
 }
